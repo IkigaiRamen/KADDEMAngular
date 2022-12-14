@@ -29,11 +29,24 @@
       }
     }
   ],
-  "contrat":[{
-
-  
-    "id":1,
-    "dateDebutContrat":"22-04-16"
+  "contrat": [
+    {
+      "id": 1,
+      "dateDebutContrat": "22-04-16"
+    }
+  ],
+  "universite": [
+    {
+      "id": 1,
+      "nomUni": "esprit",
+      "adresse": "bardo",
+      "description": "masta"
+    },
+    {
+      "nomUni": "Esprit",
+      "adresse": "ariana soghra",
+      "description": "ddd",
+      "id": 2
     }
   ]
 }

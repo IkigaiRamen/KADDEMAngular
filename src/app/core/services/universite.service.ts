@@ -13,14 +13,15 @@ export class UniversiteService {
     })
   }
   constructor(private http : HttpClient) { }
-  url: string = 'http://localhost:9090/kaddem/Universite';
+  public url = 'http://localhost:3000/universite';
 
+  allUni(){
+    return this.http.get<Universite[]>(this.url);
 
-  allUni(): Observable<any> {
-    return this.http.get(this.url + `/getAllUniversite`);
   }
   addUniv(universite: Universite){
-    return this.http.post(this.url+`/addUniversite`, universite);
+    return this.http.post(this.url, universite);
+
   }
  
  deleteUni(idUni: number): Observable<Object> {

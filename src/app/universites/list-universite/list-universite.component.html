@@ -16,14 +16,14 @@
       </thead>
       <tbody>
           <tr *ngFor="let u of listUniversites">
-              <td>{{u.idUni}}</td>
+              <td>{{u.id}}</td>
               <td>{{u.nomUni }}</td>
               <td> {{u.adresse}}</td>
               <td> {{u.description}}
               </td>
               
               <td>
-                  <button class="btn btn-sm btn-danger" (click)="deleteUniv(u.idUni)" >
+                  <button class="btn btn-sm btn-danger" (click)="deleteUniv(u.id)" >
                       delete
                   </button>
                   &nbsp;

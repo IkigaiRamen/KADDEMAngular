@@ -7,8 +7,8 @@ import { DetailsUniversiteComponent } from './details-universite/details-univers
 import { ListUniversiteComponent } from './list-universite/list-universite.component';
 
 const routes: Routes = [{ path: '', component: ListUniversiteComponent },
-{path:"universite", component:ListUniversiteComponent},
-{path:"universite/list", component:DetailsUniversiteComponent},
+{path:"universite/list", component:ListUniversiteComponent},
+//{path:"universite/list", component:DetailsUniversiteComponent},
   {path:"universite/add", component:CreateUniversiteComponent},
   
   { path: '', redirectTo: '/putUni/', pathMatch: 'full' },
