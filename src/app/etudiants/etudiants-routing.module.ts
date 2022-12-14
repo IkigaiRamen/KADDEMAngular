@@ -5,7 +5,7 @@ import { FormEtudiantComponent } from './form-etudiant/form-etudiant.component';
 import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
 
 const routes: Routes = [{ path: '', component: EtudiantsComponent },
-{ path: 'EtudiantList', component: ListEtudiantComponent },
+{ path: 'listeetudiants', component: ListEtudiantComponent },
 { path: 'FormEtudiant', component: FormEtudiantComponent },
 ];
 

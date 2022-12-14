@@ -5,9 +5,8 @@ import { ListDepartmentComponent } from '../departments/list-department/list-dep
 import { CreateUniversiteComponent } from './create-universite/create-universite.component';
 import { DetailsUniversiteComponent } from './details-universite/details-universite.component';
 import { ListUniversiteComponent } from './list-universite/list-universite.component';
-import { UniversitesComponent } from './universites.component';
 
-const routes: Routes = [{ path: '', component: UniversitesComponent },
+const routes: Routes = [{ path: '', component: ListUniversiteComponent },
 {path:"universite", component:ListUniversiteComponent},
 {path:"universite/list", component:DetailsUniversiteComponent},
   {path:"universite/add", component:CreateUniversiteComponent},

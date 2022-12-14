@@ -20,6 +20,7 @@ export class ContractListComponent implements OnInit {
     this.contrat = new Contrat();
     //getContracts
     this.contratService.getAllContrat().subscribe((data: Contrat[]) => {
+      console.log(data);
       this.contratList = data;
     });
   }

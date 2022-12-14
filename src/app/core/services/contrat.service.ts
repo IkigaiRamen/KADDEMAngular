@@ -17,11 +17,13 @@ export class ContratService {
     return this.http.get<Contrat[]>(this.uri + '/getAllContrat');
   }
   addContrat(c: Contrat) {
-    //console.log('c:==================> ', c);
+    console.log('this is the add fucntion:', c.dateDebutContrat);
     return this.http.post(this.uri + '/addContrat', c);
   }
 
   updateContrat(contrat: Contrat): Observable<Object> {
+    console.log( contrat);
+
     return this.http.put<Contrat>(this.uri + '/updateContrat', contrat);
   }
 

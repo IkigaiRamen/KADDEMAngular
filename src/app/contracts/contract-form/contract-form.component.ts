@@ -15,7 +15,7 @@ export class ContractFormComponent implements OnInit {
   constructor(
     private datePipe: DatePipe,
     private contratService: ContratService,
-    private route: Router,
+    public route: Router,
     private currentRoute: ActivatedRoute
   ) {}
   contrat: Contrat;
@@ -32,12 +32,18 @@ export class ContractFormComponent implements OnInit {
       this.action = 'update';
       this.contratService.getContratById(id).subscribe((data: Contrat) => {
         this.contrat = data;
+        console.log(data)
+
       });
-      console.log('=================>' + this.contrat);
+      console.log('update funtion' + this.contrat);
     } else {
       //add
       this.action = 'add new';
       this.contrat = new Contrat();
+      console.log('add functions>' + this.contrat);
+
+
+      this.contrat.archive=true;
     }
 
     //get
@@ -49,12 +55,15 @@ export class ContractFormComponent implements OnInit {
   //add|update
   add() {
     if (this.action == 'update') {
+      console.log('test'+this.contrat);
+      console.log('this is the date'+this.contrat.dateDebutContrat);
+
       this.contratService
         .updateContrat(this.contrat)
         .subscribe(() => console.log('complete'));
         location.reload();
     } else {
-      console.log('this.contrat:', this.contrat);
+      console.log('this is the add fucntion:', this.contrat);
       this.contratService.addContrat(this.contrat).subscribe((result) => {
         if (result) {
           this.contratList = [this.contrat, ...this.contratList];
@@ -66,7 +75,7 @@ export class ContractFormComponent implements OnInit {
 
   //delete
   delete() {
-    this.contratService.deleteContrat(this.contrat.idContrat);
+    this.contratService.deleteContrat(this.contrat.idContart);
   }
   //navigate
   goToContractList() {

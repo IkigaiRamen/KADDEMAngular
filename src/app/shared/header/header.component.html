@@ -84,10 +84,11 @@
             <div class="collapse" id="navbar-Team">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">List Of Teams</a>
-                </li>
+                  <a [routerLink]="['/equipes']" class="nav-link"
+                  >List Equipes</a>                </li>
+            
                 <li class="nav-item">
-                  <a [routerLink]="['/app-add-projet']" class="nav-link"
+                  <a [routerLink]="['/equipes/equipe/add']" class="nav-link"
                     >Add New Team</a
                   >
                 </li>
@@ -175,7 +176,7 @@
             <div class="collapse" id="navbar-contract">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a [routerLink]="['/contracts/ContractsList']" class="nav-link"
+                  <a [routerLink]="['/contracts/']" class="nav-link"
                     >List Of Contracts</a
                   >
                 </li>

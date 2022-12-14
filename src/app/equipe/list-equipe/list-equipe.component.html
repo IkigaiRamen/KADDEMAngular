@@ -1,0 +1,34 @@
+<div id="content" #content> 
+    <h1>List Equipe</h1>
+    <a class="btn btn-sm btn-warning" (click)="toadd()">
+      Add Equipe  
+  </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nom Equipe</th>
+             
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of listeEquipe">
+                <td>{{u.IdEquipe}}</td>
+                <td>{{u.nomEquipe }}</td>
+                
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)="deleteEquipe(u.IdEquipe)" >
+                        delete
+                    </button>
+                    &nbsp;
+                    <a class="btn btn-sm btn-warning" (click)="updateEquipe(u.IdEquipe)">
+                        update  
+                    </a>
+                    &nbsp;
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

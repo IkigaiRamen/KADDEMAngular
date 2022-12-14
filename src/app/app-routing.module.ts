@@ -9,7 +9,9 @@ const routes: Routes = [
   { path: 'etudiants', loadChildren: () => import('./etudiants/etudiants.module').then(m => m.EtudiantsModule) },
   { path: 'departments', loadChildren: () => import('./departments/departments.module').then(m => m.DepartmentsModule) },
   { path: 'universites', loadChildren: () => import('./universites/universites.module').then(m => m.UniversitesModule) },
-];
+  { path: 'equipes',loadChildren:() => import('./equipe/equipe.module').then(m=>m.EquipeModule)}
+]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
