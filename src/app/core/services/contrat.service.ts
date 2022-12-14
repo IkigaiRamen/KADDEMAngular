@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContratService {
-  public uri = 'http://localhost:9090/kaddem/Contrat';
+  public url = 'http://localhost:3000/contrat';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -14,24 +14,23 @@ export class ContratService {
   };
   constructor(private http: HttpClient) {}
   getAllContrat() {
-    return this.http.get<Contrat[]>(this.uri + '/getAllContrat');
+    return this.http.get<Contrat[]>(this.url);
+  } 
+  getContratById(id: number) {
+    return this.http.get<Contrat>(this.url+'/'+id);
   }
   addContrat(c: Contrat) {
-    console.log('this is the add fucntion:', c.dateDebutContrat);
-    return this.http.post(this.uri + '/addContrat', c);
+        return this.http.post(this.url, Contrat)
   }
 
-  updateContrat(contrat: Contrat): Observable<Object> {
-    console.log( contrat);
+  updateContrat(Contrat: Contrat): Observable<Object> {
+    const ID = Contrat.id;
 
-    return this.http.put<Contrat>(this.uri + '/updateContrat', contrat);
+    return this.http.put<Contrat>(this.url+'/'+ID, Contrat);
   }
 
-  getContratById(id: number) {
-    return this.http.get<Contrat>(this.uri + `/getbyidContrat/${id}`);
-  }
 
   deleteContrat(id: number): Observable<Object> {
-    return this.http.delete(this.uri + `/deleteContrat/${id}`);
+    return this.http.delete(this.url+'/'+id);
   }
 }

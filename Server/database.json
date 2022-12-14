@@ -28,5 +28,12 @@
         "thematique": "theme"
       }
     }
+  ],
+  "contrat":[{
+
+  
+    "id":1,
+    "dateDebutContrat":"22-04-16"
+    }
   ]
 }
