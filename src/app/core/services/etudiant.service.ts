@@ -7,7 +7,11 @@ import { Etudiant } from '../Model/Etudiant';
   providedIn: 'root'
 })
 export class EtudiantService {
-
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
   url = "http://localhost:3000/etudiants";  
 
     constructor(private http:HttpClient) { }
@@ -18,17 +22,13 @@ export class EtudiantService {
   getEtudiantById(id: number) {
     return this.http.get<Etudiant>(this.url+'/'+id);
   }
-  addEtudiant(e: Etudiant): Observable<any> {
-        const headers = { 'content-type': 'application/json'}  
-    const body=JSON.stringify(Etudiant);
-    console.log(body)
-    return this.http.post(this.url, body,{'headers':headers})
-  }
+  addEtudiant(Etudiant: Etudiant){
+    return this.http.post(this.url, Etudiant);
+  }
 
-  updateEtudiant(e: Etudiant): Observable<Object> {
-    const ID = e.id;
-
-    return this.http.put<Etudiant>(this.url+'/'+ID, Etudiant);
+  updateEtudiant(e: Etudiant) {
+  
+    return this.http.put<Etudiant>(this.url+'/'+e.id,Etudiant);
   }
 
   deleteEtudiant(id: number): Observable<Object> {

@@ -15,6 +15,21 @@
     {
       "nomE": "ram",
       "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "nomE": "TEST",
+      "prenomE": "TEST",
+      "options": "NIDS",
+      "id": 14
+    },
+    {
+      "nomE": "TEST",
+      "prenomE": "khammessi",
+      "options": "NIDS",
+      "id": 15
     }
   ],
   "equipe": [
@@ -27,12 +42,28 @@
         "salle": 11,
         "thematique": "theme"
       }
+    },
+    {
+      "nomEquipe": "test",
+      "id": 2
     }
   ],
   "contrat": [
     {
-      "id": 1,
-      "dateDebutContrat": "22-04-16"
+      "archive": true,
+      "dateDebutContrat": "2022-12-22",
+      "dateFinContrat": "2022-12-21",
+      "specialite": "2",
+      "montantContrat": 1500,
+      "id": 2
+    },
+    {
+      "archive": true,
+      "dateDebutContrat": "2022-12-22",
+      "dateFinContrat": "2022-12-16",
+      "specialite": "3",
+      "montantContrat": 1200,
+      "id": 3
     }
   ],
   "universite": [
