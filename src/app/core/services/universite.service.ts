@@ -24,14 +24,14 @@ export class UniversiteService {
 
   }
  
- deleteUni(idUni: number): Observable<Object> {
-    return this.http.delete(this.url + `/deleteUniversite/${idUni}`);
-  }
-  getUniversiteById(idUni: number): Observable<Universite> {
-    return this.http.get<Universite>(this.url + `/getbyid/${idUni}`);
+ deleteUni(id: number): Observable<Object> {
+  return this.http.delete(this.url+'/'+id);
+}
+  getUniversiteById(id: number): Observable<Universite> {
+    return this.http.get<Universite>(this.url+'/'+id);
   } 
   updateUni(universite: Universite ): Observable<Universite> {
-    return this.http.put<Universite>(this.url + `/updateUniversite/`,universite );
+    return this.http.put<Universite>(this.url+'/'+universite.id,universite);
   }
   
   

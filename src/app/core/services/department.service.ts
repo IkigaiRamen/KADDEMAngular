@@ -14,28 +14,28 @@ export class DepartmentService {
     })
   }
   constructor(private http : HttpClient) { }
-  url: string = 'http://localhost:9090/kaddem/Departement';
+  url: string = 'http://localhost:3000/departement';
 
 
   getAlldep() {
-    return this.http.get<Department[]>(this.url + `/getAldepartement`);
+    return this.http.get<Department[]>(this.url);
   }
   addDepartment(department: Department): Observable<Object> {
-    return this.http.post(this.url + `/add`, department);
+    return this.http.post(this.url, department);
   }
   //updateDepartment(idDepart: number,department: department): Observable<Object> {
     //return this.http.put(this.url + `/putDep/${idDepart}`, department);
  // }
  
-  deleteDepartment(idDepart: number): Observable<Object> {
-    return this.http.delete(this.url + `/deletedepartement/${idDepart}`);
+  deleteDepartment(id: number): Observable<Object> {
+    return this.http.delete(this.url+'/'+id);
   }
-  getDepartmentById(idDepart: number): Observable<Department> {
-    return this.http.get<Department>(this.url + `/getdepartementbyid/${idDepart}`);
+  getDepartmentById(id: number): Observable<Department> {
+    return this.http.get<Department>(this.url+'/'+id);
   } 
  
   updateDepartment(department: Department): Observable<any> {
-    return this.http.put<Department>(this.url + `/putDepatement/`,department);
+    return this.http.put<Department>(this.url+'/'+department.id,department);
   }
   exportPDF(): Observable<any> {
     return this.http.get<Department>(this.url + `/pdfDownload`, {

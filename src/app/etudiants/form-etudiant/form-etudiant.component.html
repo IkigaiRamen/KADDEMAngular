@@ -30,6 +30,32 @@
       <option value="SIM">SIM</option>
       <option value="NIDS">NIDS</option>
     </select>
+    
+    <div class="alert alert-danger" *ngIf="s.invalid && s.touched">
+      <div *ngIf="s.hasError('required')">This field is required</div>
+  </div>
+  </div>
+
+   <div class="form-group col-md-6">
+    <label>Departement</label>
+    <select [(ngModel)]="etudiant.department" name="option" class="form-control" required #b="ngModel">
+      <option *ngFor="let depart of listeDept" [ngValue]="depart">{{depart.nomDepart}}</option>
+    </select>
+    
+    <div class="alert alert-danger" *ngIf="s.invalid && s.touched">
+      <div *ngIf="s.hasError('required')">This field is required</div>
+  </div>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label>Contrats</label>
+    <div *ngFor='let contrats of listeContrats; let i = index'>
+    
+      <label for="scales">{{contrats.dateDebutContrat}}</label>
+      <input type="checkbox" [id]="contrats" [(ngModel)]="etudiant.contrats">
+      
+  </div>
+    
     <div class="alert alert-danger" *ngIf="s.invalid && s.touched">
       <div *ngIf="s.hasError('required')">This field is required</div>
   </div>

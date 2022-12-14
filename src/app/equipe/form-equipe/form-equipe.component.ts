@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { detailEquipe } from 'src/app/core/Model/detailEquipe';
 import { Equipe } from 'src/app/core/Model/Equipe';
 import { EquipeService } from 'src/app/core/services/equipe.service';
 
@@ -12,6 +13,7 @@ export class FormEquipeComponent implements OnInit {
   listEquipe: Equipe[];
   action:String;
   Equipe: Equipe;
+  DetailEquipe:detailEquipe;
     
     constructor(
       private Equipeservice: EquipeService,
@@ -22,6 +24,8 @@ export class FormEquipeComponent implements OnInit {
   
     ngOnInit(): void {
       this.Equipe = new Equipe();
+      this.DetailEquipe=new detailEquipe();
+
       let id = this.currentRoute.snapshot.params['id'];
       if (id != null) {
         //update
@@ -46,12 +50,14 @@ export class FormEquipeComponent implements OnInit {
     //add|update
     add() {
       if (this.action == 'update') {
+        this.Equipe.detailEquipe=this.DetailEquipe;
         this.Equipeservice
           .updateEquipe(this.Equipe)
           .subscribe(() => console.log('complete'));
       } else {
       
         console.log('this.Equipe:', this.Equipe);
+        this.Equipe.detailEquipe=this.DetailEquipe;
         this.Equipeservice.addEquipe(this.Equipe).subscribe((result) => {
           if (result) {
             this.listEquipe = [this.Equipe, ...this.listEquipe];
