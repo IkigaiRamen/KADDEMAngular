@@ -68,7 +68,7 @@ department: Department=new Department();
 
   //delete
   delete() {
-    this.departmentserivce.deleteDepartment(this.department.idDepart);
+    this.departmentserivce.deleteDepartment(this.department.id);
   }
   //navigate
   goToDepartmentList() {

@@ -11,7 +11,7 @@ export class DetailsUniversiteComponent implements OnInit {
 
   constructor( private universiteservice:UniversiteService) { }
   currentUniversite: Universite ={
-    idUni:0,
+    id:0,
     nomUni:"",
     adresse:"",
     description:"",
@@ -36,7 +36,7 @@ export class DetailsUniversiteComponent implements OnInit {
   }
   refreshList(): void {
     this.retriveUniversites();
-    this.currentUniversite = {  idUni:0,
+    this.currentUniversite = {  id:0,
       nomUni:"",
       adresse:"",
       description:"",

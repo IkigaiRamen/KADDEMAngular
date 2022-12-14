@@ -1,7 +1,7 @@
 
 import { Department } from "./Department";
 export class Universite{
-    idUni:number;
+    id:number;
     nomUni:String;
     adresse:String;
     description:String;

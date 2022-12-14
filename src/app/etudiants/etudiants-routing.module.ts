@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EtudiantsComponent } from './etudiants.component';
 import { FormEtudiantComponent } from './form-etudiant/form-etudiant.component';
 import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
 
-const routes: Routes = [{ path: '', component: EtudiantsComponent },
-{ path: 'listeetudiants', component: ListEtudiantComponent },
-{ path: 'FormEtudiant', component: FormEtudiantComponent },
+const routes: Routes = [{ path: '', component: ListEtudiantComponent },
+{ path: 'FormEtudiant', component: FormEtudiantComponent }
 ];
 
 @NgModule({

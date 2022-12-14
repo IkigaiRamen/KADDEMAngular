@@ -8,30 +8,38 @@ import { Etudiant } from '../Model/Etudiant';
 })
 export class EtudiantService {
 
-  public uri = 'http://localhost:9090/kaddem/Etudiant';
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
-  constructor(private http: HttpClient) {}
+  url = "http://localhost:3000/etudiants";  
+
+    constructor(private http:HttpClient) { }
+
   getAllEtudiant() {
-    return this.http.get<Etudiant[]>(this.uri + '/getalletudiant');
+    return this.http.get<Etudiant[]>(this.url);
   }
-  addEtudiant(e: Etudiant) {
-    //console.log('c:==================> ', c);
-    return this.http.post(this.uri + '/addetudiant', e);
+  getEtudiantById(id: number) {
+    return this.http.get<Etudiant>(this.url+'/'+id);
   }
+  addEtudiant(e: Etudiant): Observable<any> {
+        const headers = { 'content-type': 'application/json'}  
+    const body=JSON.stringify(Etudiant);
+    console.log(body)
+    return this.http.post(this.url, body,{'headers':headers})
+  }
 
   updateEtudiant(e: Etudiant): Observable<Object> {
-    return this.http.put<Etudiant>(this.uri + '/updateEtutiant', e);
-  }
+    const ID = e.id;
 
-  getEtudiantById(id: number) {
-    return this.http.get<Etudiant>(this.uri + `/getbyid/${id}`);
+    return this.http.put<Etudiant>(this.url+'/'+ID, Etudiant);
   }
 
   deleteEtudiant(id: number): Observable<Object> {
-    return this.http.delete(this.uri + `/delete/${id}`);
+    return this.http.delete(this.url+'/'+id);
   }
+  listeEquipes: Etudiant[]= [];
+
+
+  //URL du Backend
+
+
+
 }
+

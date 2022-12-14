@@ -1,0 +1,32 @@
+{
+  "etudiants": [
+    {
+      "id": 1,
+      "prenomE": "2020-09-15",
+      "nomE": "2020-09-14",
+      "option": "GAMIX",
+      "equipes": [],
+      "departement": {
+        "idDepart": 3,
+        "nomDepart": "aaa"
+      },
+      "contracts": []
+    },
+    {
+      "nomE": "ram",
+      "id": 12
+    }
+  ],
+  "equipe": [
+    {
+      "id": 1,
+      "nomEquipe": "innovators",
+      "niveau": "Senior",
+      "etudiants": [],
+      "detailEquipe": {
+        "salle": 11,
+        "thematique": "theme"
+      }
+    }
+  ]
+}

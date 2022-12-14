@@ -3,7 +3,7 @@ import { Universite } from "./Universite";
 
 //simport { Universite } from "./universite";
 export class Department{
-    idDepart:number;
+    id:number;
     nomDepart:String;
     code:String;
     type:String;

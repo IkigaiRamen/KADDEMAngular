@@ -21,13 +21,13 @@ export class ListEquipeComponent implements OnInit {
      this.listeEquipe = res;
    });
  }
- updateEquipe(idEquipe: number) {
-   this.router.navigate(['/universites/universite/putUni', idEquipe]);
+ updateEquipe(id: number) {
+   this.router.navigate(['/universites/universite/putUni', id]);
  }
 
  
- deleteEquipe(idEquipe: number) {
-   this.Equipeser.deleteEquipe(idEquipe).subscribe((data) => {
+ deleteEquipe(id: number) {
+   this.Equipeser.deleteEquipe(id).subscribe((data) => {
      console.log(data);
      this.allEquipe();
    });

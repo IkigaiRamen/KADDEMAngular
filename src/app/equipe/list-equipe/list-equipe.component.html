@@ -14,15 +14,15 @@
         </thead>
         <tbody>
             <tr *ngFor="let u of listeEquipe">
-                <td>{{u.IdEquipe}}</td>
+                <td>{{u.id}}</td>
                 <td>{{u.nomEquipe }}</td>
                 
                 <td>
-                    <button class="btn btn-sm btn-danger" (click)="deleteEquipe(u.IdEquipe)" >
+                    <button class="btn btn-sm btn-danger" (click)="deleteEquipe(u.id)" >
                         delete
                     </button>
                     &nbsp;
-                    <a class="btn btn-sm btn-warning" (click)="updateEquipe(u.IdEquipe)">
+                    <a class="btn btn-sm btn-warning" (click)="updateEquipe(u.id)">
                         update  
                     </a>
                     &nbsp;

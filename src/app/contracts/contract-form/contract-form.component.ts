@@ -75,7 +75,7 @@ export class ContractFormComponent implements OnInit {
 
   //delete
   delete() {
-    this.contratService.deleteContrat(this.contrat.idContart);
+    this.contratService.deleteContrat(this.contrat.id);
   }
   //navigate
   goToContractList() {

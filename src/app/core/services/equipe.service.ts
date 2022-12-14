@@ -14,24 +14,27 @@ export class EquipeService {
     })
   }
   constructor(private http : HttpClient) { }
-  url: string = 'http://localhost:9090/kaddem/Equipe';
+  url: string = 'http://localhost:3000/equipe';
 
 
   allEquipe(): Observable<any> {
-    return this.http.get(this.url + `/getAllEquipe`);
+    return this.http.get<Equipe[]>(this.url);
   }
+  getEquipeById(id: number): Observable<Equipe> {
+    return this.http.get<Equipe>(this.url+'/'+id);
+  } 
   addEquipe(Equipe: Equipe){
     return this.http.post(this.url+`/addEquipe`, Equipe);
   }
  
- deleteEquipe(idEquipe: number): Observable<Object> {
-    return this.http.delete(this.url + `/deleteEquipe/${idEquipe}`);
+ deleteEquipe(id: number): Observable<Object> {
+    return this.http.delete(this.url +'/'+id);
   }
-  getEquipeById(idEquipe: number): Observable<Equipe> {
-    return this.http.get<Equipe>(this.url + `/getbyid/${idEquipe}`);
-  } 
+
   updateEquipe(Equipe: Equipe ): Observable<Equipe> {
-    return this.http.put<Equipe>(this.url + `/updateEquipe/`,Equipe );
+    const ID = Equipe.id;
+
+    return this.http.put<Equipe>(this.url+'/'+ID, Equipe);
   }
   
   

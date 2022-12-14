@@ -68,7 +68,7 @@ universite: Universite;
 
   //delete
   delete() {
-    this.universiteservice.deleteUni(this.universite.idUni);
+    this.universiteservice.deleteUni(this.universite.id);
   }
   //navigate
   goToDepartmentList() {

@@ -47,10 +47,10 @@ export class FormEtudiantComponent implements OnInit {
         .subscribe(() => console.log('complete'));
         location.reload();
     } else {
-      console.log('this.contrat:', this.etudiant);
+      console.log('this is the student:', this.etudiant);
       this.etudiantService.addEtudiant(this.etudiant).subscribe((result) => {
         if (result) {
-          this.route.navigate(['/etudiants/EtudiantList'])
+          this.route.navigate(['/etudiants/'])
           this.etudiantList = [this.etudiant, ...this.etudiantList];
           //location.reload();
         }
@@ -60,11 +60,11 @@ export class FormEtudiantComponent implements OnInit {
 
   //delete
   delete() {
-    this.etudiantService.deleteEtudiant(this.etudiant.idEtudiant);
+    this.etudiantService.deleteEtudiant(this.etudiant.id);
   }
   //navigate
   goToEtudiantList() {
-    this.route.navigate(['/etudiants/EtudiantList']);
+    this.route.navigate(['/etudiants/']);
   }
 
   }

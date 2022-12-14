@@ -12,7 +12,7 @@ export class DetailsDepartmentComponent implements OnInit {
   idDepart:any;
   constructor(private departmentserivce: DepartmentService)  { }
    currentDepartment: Department ={
-    idDepart: 0,
+    id: 0,
     nomDepart: "",
     code: "",
     type: "",
@@ -41,7 +41,7 @@ export class DetailsDepartmentComponent implements OnInit {
   }
   refreshList(): void {
     this.retriveDepartments();
-    this.currentDepartment = { idDepart: 0,
+    this.currentDepartment = { id: 0,
       nomDepart: "",
       code: "",
       type: "",

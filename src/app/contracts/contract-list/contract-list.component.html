@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let contrat of contratList">
-                <td>{{contrat.idContart}}</td>
+                <td>{{contrat.id}}</td>
                 <td>{{contrat.dateDebutContrat }}</td>
                 <td> {{contrat.dateFinContrat}}
                 </td>
@@ -22,15 +22,15 @@
                 <td> {{contrat.montantContrat}}
                 </td>
                 <td>
-                    <button class="btn btn-sm btn-danger" (click)="delete(contrat.idContart)" >
+                    <button class="btn btn-sm btn-danger" (click)="delete(contrat.id)" >
                         delete
                     </button>
                     &nbsp;
-                    <a class="btn btn-sm btn-warning" [routerLink]="['/contracts/updateContract',contrat.idContart]">
+                    <a class="btn btn-sm btn-warning" [routerLink]="['/contracts/updateContract',contrat.id]">
                         update  
                     </a>
                     &nbsp;
-                    <a class="btn btn-sm btn-info" [routerLink]="['/contracts/',contrat.idContart]" >
+                    <a class="btn btn-sm btn-info" [routerLink]="['/contracts/',contrat.id]" >
                         details  
                     </a>
                     &nbsp;

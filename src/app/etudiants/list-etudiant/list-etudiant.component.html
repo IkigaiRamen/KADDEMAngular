@@ -12,14 +12,14 @@
         </thead>
         <tbody>
             <tr *ngFor="let etudiant of etudiantList">
-                <td>{{etudiant.idEtudiant}}</td>
+                <td>{{etudiant.id}}</td>
                 <td>{{etudiant.nomE}}</td>
                 <td> {{etudiant.prenomE}}
                 </td>
                 <td> {{etudiant.options}}
                 </td>
                 <td>
-                    <button class="btn btn-sm btn-danger" (click)="delete(etudiant.idEtudiant)" >
+                    <button class="btn btn-sm btn-danger" (click)="delete(etudiant.id)" >
                         Delete
                     </button>
                     &nbsp;

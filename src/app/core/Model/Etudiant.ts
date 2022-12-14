@@ -4,11 +4,11 @@ import { Equipe } from "./Equipe";
 import { Option } from "./Option";
 
 export class Etudiant {
-    idEtudiant : number ;
+    id : number ;
     nomE : String ;
     prenomE : String ;
     options:Option;
     department:Department;
-    contrats:Contrat;
-    equipes:Equipe
+    contrats:[Contrat];
+    equipes:[Equipe]
 }

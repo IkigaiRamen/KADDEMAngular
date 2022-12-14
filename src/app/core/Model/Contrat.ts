@@ -2,7 +2,7 @@ import { Etudiant } from "./Etudiant";
 import { Specialite } from "./Specialite";
 
 export class Contrat {
-    idContart: number;
+    id: number;
     dateDebutContrat : Date;
     dateFinContrat: Date;
     archive: boolean;

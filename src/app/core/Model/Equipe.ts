@@ -2,7 +2,7 @@ import { Etudiant } from "./Etudiant";
 
 export class Equipe {
 
-     idEquipe!: number;
+     id!: number;
     nomEquipe!: string;
     etudiants!:[Etudiant];
 }
