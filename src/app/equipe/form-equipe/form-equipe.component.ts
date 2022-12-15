@@ -39,6 +39,7 @@ export class FormEquipeComponent implements OnInit {
         //add
         this.action = 'Add';
         this.Equipe = new Equipe();
+        this.Equipe.detailEquipe=new detailEquipe();
       }
   
       //get
@@ -53,13 +54,15 @@ export class FormEquipeComponent implements OnInit {
         console.log("this equipe after update id", this.Equipe.id)
         this.Equipeservice.updateEquipe(this.Equipe)
           .subscribe(() => console.log('complete'));
+          this.router.navigate(['/equipes/'])
+
       } else {
       
         console.log('this.Equipe:', this.Equipe);
         this.Equipeservice.addEquipe(this.Equipe).subscribe((result) => {
           if (result) {
             this.listEquipe = [this.Equipe, ...this.listEquipe];
-            location.reload();
+            this.router.navigate(['/equipes/'])
           }
         });
       }
