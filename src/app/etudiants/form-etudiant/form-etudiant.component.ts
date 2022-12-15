@@ -66,7 +66,8 @@ export class FormEtudiantComponent implements OnInit {
       this.etudiantService
         .updateEtudiant(this.etudiant)
         .subscribe(() => console.log('complete'));
-        location.reload();
+        this.route.navigate(['/etudiants/'])
+
     } else {
       console.log('this is the student:', this.etudiant);
       this.etudiantService.addEtudiant(this.etudiant).subscribe((result) => {

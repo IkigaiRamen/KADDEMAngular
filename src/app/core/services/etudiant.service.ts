@@ -26,7 +26,7 @@ export class EtudiantService {
     return this.http.post(this.url, Etudiant);
   }
 
-  updateEtudiant(e: Etudiant):Observable<Etudiant> {
+  updateEtudiant(e: Etudiant):Observable<any> {
     const ID =e.id;
     console.log("this is the object in service",e , e.department)
     return this.http.put<Etudiant>(this.url+'/'+ID,e);}
