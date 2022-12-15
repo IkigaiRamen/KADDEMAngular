@@ -2,8 +2,8 @@
   "etudiants": [
     {
       "nomE": "TEST",
-      "prenomE": "Ram",
-      "options": "GAMIX",
+      "prenomE": "dsqdq",
+      "options": "SE",
       "department": {
         "id": 1,
         "nomDepart": "departement",
@@ -65,10 +65,10 @@
       }
     },
     {
-      "nomEquipe": "tested",
+      "nomEquipe": "name",
       "detailEquipe": {
-        "salle": "14",
-        "thematique": "ereee"
+        "salle": "12",
+        "thematique": "ddssqd"
       },
       "id": 2
     },
@@ -79,22 +79,14 @@
         "thematique": "theme"
       },
       "id": 3
-    },
-    {
-      "nomEquipe": "equipe",
-      "detailEquipe": {
-        "salle": "12",
-        "thematique": "theme"
-      },
-      "id": 4
     }
   ],
   "contrat": [
     {
       "archive": true,
-      "dateDebutContrat": "2022-12-28",
+      "dateDebutContrat": "2022-12-22",
       "dateFinContrat": "2022-12-21",
-      "specialite": "3",
+      "specialite": "2",
       "montantContrat": 1700,
       "id": 2
     },
@@ -103,7 +95,7 @@
       "dateDebutContrat": "2022-12-22",
       "dateFinContrat": "2022-12-16",
       "specialite": "3",
-      "montantContrat": 984,
+      "montantContrat": 600,
       "id": 3
     },
     {
@@ -149,7 +141,6 @@
   ],
   "departement": [
     {
-<<<<<<< Updated upstream
       "nomDepart": "vvvvvvv",
       "type": "oui",
       "description": "oui",
@@ -172,19 +163,18 @@
         "id": 5
       },
       "id": 8
-=======
-      "id": 1,
-      "nomDepart": "departement",
-      "code": "dep",
-      "type": "twin",
-      "description": "description"
     },
     {
-      "nomDepart": "dept",
-      "type": "type",
-      "description": "test",
-      "id": 2
->>>>>>> Stashed changes
+      "nomDepart": "guyjiokolpm",
+      "type": "dddd",
+      "description": "ddddd",
+      "universites": {
+        "nomUni": "sesame",
+        "adresse": "aaaaaaaaa",
+        "description": "sssss",
+        "id": 5
+      },
+      "id": 9
     }
   ]
 }
