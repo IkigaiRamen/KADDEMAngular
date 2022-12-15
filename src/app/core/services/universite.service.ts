@@ -24,8 +24,8 @@ export class UniversiteService {
 
   }
  
- deleteUni(idUni: number): Observable<Object> {
-    return this.http.delete(this.url + `/deleteUniversite/${idUni}`);
+ deleteUni(idUni: number) {
+    return this.http.delete(this.url+'/'+idUni);
   }
   getUniversiteById(idUni: number): Observable<Universite> {
     return this.http.get<Universite>(this.url + `/getbyid/${idUni}`);

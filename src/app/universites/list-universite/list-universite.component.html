@@ -1,8 +1,10 @@
 <div id="content" #content> 
   <h1>List Universite</h1>
-  <a class="btn btn-sm btn-warning" (click)="toadd()">
-    Add Universite  
-</a>
+  <button type="button"  (click)="openAddForm()" >Add new Student</button>
+  <div *ngIf="shouldOpen">
+            
+    <app-create-universite [universiteFromParent]="un" (notification)="add2($event)"></app-create-universite>
+    </div>
   <table class="table">
       <thead>
           <tr>
@@ -15,7 +17,7 @@
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let u of listUniversites">
+          <tr *ngFor="let u of listUniversite">
               <td>{{u.id}}</td>
               <td>{{u.nomUni }}</td>
               <td> {{u.adresse}}</td>
@@ -27,7 +29,7 @@
                       delete
                   </button>
                   &nbsp;
-                  <a class="btn btn-sm btn-warning" (click)="updateUniversite(u.idUni)">
+                  <a class="btn btn-sm btn-warning" (click)="sendTofils(u)">
                       update  
                   </a>
                   &nbsp;

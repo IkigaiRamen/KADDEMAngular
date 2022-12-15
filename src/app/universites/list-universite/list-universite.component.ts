@@ -12,19 +12,75 @@ import { UniversiteService } from 'src/app/core/services/universite.service';
 })
 export class ListUniversiteComponent implements OnInit {
   Universites: Universite[];
-  listUniversites :any ;
-  
+  listUniversite: Universite[];
+  shouldOpen!:boolean;
+action:String;
+universite: Universite;
+un:Universite;
  
-  constructor(private universiteservice:UniversiteService,private router: Router,private uss: ActivatedRoute) { }
+  constructor(private universiteservice:UniversiteService,
+    private router: Router,private uss: ActivatedRoute) { }
 
  
     ngOnInit(): void {
+
+
       this.allUni();
      }
+
+
+
+      //add|update
+
+      add2(universite:Universite){
+      //  let id = this.uss.snapshot.params['id'];
+// console.log(id);
+console.log(universite);
+if(universite.id!=null){
+  console.log(universite);
+this.action="update";
+}
+else{
+        console.log(universite);
+        console.log("last");
+        this.universiteservice.addUniv(universite).subscribe();
+       location.reload();
+}
+      }
+      sendTofils(u:Universite){
+        console.log("2")
+       window.scroll(0,0);
+        this.un={...u};
+        console.log(this.universite);
+        this.shouldOpen=true;
+      }
+  add(universite:Universite) {
+    console.log("aywah");
+    console.log(universite);
+
+    if (this.action == 'update') {
+      this.universiteservice
+        .updateUni(this.universite)
+        .subscribe(() => console.log('complete'));
+    } else {
     
+      console.log('this.universite:', this.universite);
+      this.universiteservice.addUniv(this.universite).subscribe((result) => {
+        if (result) {
+          this.Universites = [this.universite, ...this.listUniversite];
+          location.reload();
+        }
+      });
+    }
+    
+  }
+     openAddForm(){
+      this.shouldOpen = true;
+    }
      allUni() {
       this.universiteservice.allUni().subscribe((res) => {
-        this.listUniversites = res;
+        this.listUniversite = res;
+        
       });
     }
     updateUniversite(idUni: number) {
@@ -33,10 +89,8 @@ export class ListUniversiteComponent implements OnInit {
   
     
     deleteUniv(idUni: number) {
-      this.universiteservice.deleteUni(idUni).subscribe((data) => {
-        console.log(data);
-        this.allUni();
-      });
+      this.universiteservice.deleteUni(idUni).subscribe(() => {this.allUni()});
+
     }
     
     toadd(){

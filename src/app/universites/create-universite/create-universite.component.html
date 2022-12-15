@@ -1,5 +1,5 @@
 <h1>{{action}}Universite</h1>
-<form #f="ngForm">
+<form #f="ngForm" (ngSubmit)="notifparent(universite)">
  <div class="form-group col-md-6">
     <label>Name:* </label>
     <input type="text" name="nomUni" [(ngModel)]="universite.nomUni"
@@ -48,7 +48,7 @@
   </div>
   </div>
    
-  <button (click)="add()"
+  <button type="submit"
    class="btn btn-sm btn-success"
    [disabled]="f.invalid" >
     {{action}}

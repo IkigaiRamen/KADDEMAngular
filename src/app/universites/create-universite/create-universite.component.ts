@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Contrat } from 'src/app/core/Model/Contrat';
 import { Universite } from 'src/app/core/Model/Universite';
 import {UniversiteService}from 'src/app/core/services/universite.service'
 
@@ -10,7 +11,8 @@ import {UniversiteService}from 'src/app/core/services/universite.service'
   styleUrls: ['./create-universite.component.css']
 })
 export class CreateUniversiteComponent implements OnInit {
-
+  @Output() notification = new EventEmitter<Universite>();
+  @Input() universiteFromParent? :Universite;
   listUniversite: Universite[];
 action:String;
 universite: Universite;
@@ -23,49 +25,22 @@ universite: Universite;
   ) {}
 
   ngOnInit(): void {
-    this.universite = new Universite();
-    let id = this.currentRoute.snapshot.params['id'];
-    if (id != null) {
-      //update
-      this.action = 'Update';
-      this.universiteservice.getUniversiteById(id).subscribe((data: Universite) => {
-        
-        this.universite = data;
-      });
-      console.log('=================>' + this.universite);
-      this.goToDepartmentList
-    } else {
-      //add
+    console.log(this.universiteFromParent);
+    if(this.universiteFromParent!=null){
+      console.log("aywah");
+      this.action="update";
+      this.universite=this.universiteFromParent;
+    }else{
       this.action = 'Add';
       this.universite = new Universite();
-      this.goToDepartmentList
     }
-
-    //get
-    this.universiteservice.allUni().subscribe((data: Universite[]) => {
-      this.listUniversite = data;
-    });
   }
 
-  //add|update
-  add() {
-    if (this.action == 'update') {
-      this.universiteservice
-        .updateUni(this.universite)
-        .subscribe(() => console.log('complete'));
-    } else {
-    
-      console.log('this.universite:', this.universite);
-      this.universiteservice.addUniv(this.universite).subscribe((result) => {
-        if (result) {
-          this.listUniversite = [this.universite, ...this.listUniversite];
-          location.reload();
-        }
-      });
-    }
-    
-  }
 
+  notifparent(universite:Universite){
+    console.log(universite);
+    this.notification.emit(universite)
+  }
   //delete
   delete() {
     this.universiteservice.deleteUni(this.universite.id);
