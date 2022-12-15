@@ -50,12 +50,10 @@
  <div class="form-group">
   <label> Universite</label>
   <div class="col-sm-10">
- <select name="department" class="from-controler">
- <option>---select--</option>  
- 
- <option> universite</option>
 
-</select>
+    <select [(ngModel)]="department.universites" name="option" class="form-control" required #b="ngModel">
+      <option *ngFor="let uni of listeUni" [ngValue]="uni">{{uni.nomUni}}</option>
+    </select>
  </div>
 </div>
 

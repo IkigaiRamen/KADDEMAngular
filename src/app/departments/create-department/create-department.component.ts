@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Department } from 'src/app/core/Model/Department';
 import { Universite } from 'src/app/core/Model/Universite';
 import { DepartmentService } from 'src/app/core/services/department.service';
+import { UniversiteService } from 'src/app/core/services/universite.service';
 
 
 @Component({
@@ -15,23 +16,34 @@ export class CreateDepartmentComponent implements OnInit {
   listdepartments: Department[];
 action:String;
 nomUni:any;
+listeUni:Universite[];
 department: Department=new Department();
 
-  constructor(private departmentserivce: DepartmentService, private router: Router,  private currentRoute: ActivatedRoute) { }
+  constructor(private departmentserivce: DepartmentService,
+     private router: Router,  private currentRoute: ActivatedRoute,
+     private universiteSer:UniversiteService) { }
 
   ngOnInit(): void {
+
+
+    this.universiteSer.allUni().subscribe((dat: Universite[]) => {
+      this.listeUni = dat;
+      console.log(dat);
+    })
+    
     this.department.universites = {nomUni:null};
     
     this.department = new Department();
     let id = this.currentRoute.snapshot.params['id'];
+          //update
+
     if (id != null) {
-      //update
+      console.log(id);
+      this.departmentserivce.getDepartmentById(id).subscribe((data:Department)=>{
+        this.department=data
+      })
+      console.log(this.department);
       this.action = 'update';
-      this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data:Department[]) => {
-        
-        this.department.universites.nomUni= data;
-      });
-      console.log('=================>' + this.department);
       this.goToDepartmentList
     } else {
       //add
@@ -40,10 +52,6 @@ department: Department=new Department();
       this.goToDepartmentList
     }
 
-    //get
-    this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data: Department[]) => {
-      this.listdepartments = data;
-    });
   }
 
   //add|update
@@ -52,6 +60,8 @@ department: Department=new Department();
       this.departmentserivce
         .updateDepartment(this.department)
         .subscribe(() => console.log('complete'));
+          this.router.navigate(['/departments/Department/list'])
+
     } else {
     
       console.log('this.department:', this.department);
@@ -72,7 +82,7 @@ department: Department=new Department();
   }
   //navigate
   goToDepartmentList() {
-    this.router.navigate(['/Department']);
+    this.router.navigate(['/DepartmentDepartment/list']);
   }
 }
 

@@ -39,20 +39,20 @@
             };
       let i = index
     ">
-              <td>{{u.idDepart}}</td>
+              <td>{{u.id}}</td>
               <td>{{u.nomDepart }}</td>
              
               <td [ngStyle]="{color: u.code=='Informatique' ? '#71BC75' : '#550F00' }"> {{u.type}} </td>
               
-              <td>{{ u?.universites?.nomUni }}</td>
+              <td>{{ u.universites.nomUni }}</td>
               <td > {{u.description}}</td>
               
               <td>
-                  <button class="btn btn-sm btn-danger" (click)="deletedepartment(u.idDepart)" >
+                  <button class="btn btn-sm btn-danger" (click)="deletedepartment(u.id)" >
                       delete
                   </button>
                   &nbsp;
-                  <a class="btn btn-sm btn-warning" (click)="updatedepartment(u.idDepart)">
+                  <a class="btn btn-sm btn-warning" (click)="updatedepartment(u.id)">
                       update  
                   </a>
 

@@ -13,7 +13,7 @@ export class ListDepartmentComponent implements OnInit {
   title = 'pagination';
   page: number = 1;
   count: number = 0;
-  tableSize: number = 1;
+  tableSize: number = 5;
   tableSizes: any = [1, 2, 15, 20];
 
 
@@ -43,10 +43,10 @@ export class ListDepartmentComponent implements OnInit {
 
   
   deletedepartment(idDepart: number) {
-    this.departmentservice. deleteDepartment(idDepart).subscribe((data) => {
-      console.log(data);
-      this.getAlldep();
-    });
+    console.log(idDepart);
+    this.departmentservice.deleteDepartment(idDepart).subscribe();
+    location.reload();
+
   }
   
   toadd(){

@@ -131,15 +131,38 @@
       "adresse": "aaaaa",
       "description": "ddddd",
       "id": 10
+    },
+    {
+      "nomUni": "seif",
+      "adresse": "seif",
+      "description": "seif",
+      "id": 11
     }
   ],
   "departement": [
     {
-      "id": 1,
-      "nomDepart": "departement",
-      "code": "dep",
-      "type": "twin",
-      "description": "description"
+      "nomDepart": "vvvvvvv",
+      "type": "oui",
+      "description": "oui",
+      "universites": {
+        "id": 1,
+        "nomUni": "espdddddd",
+        "adresse": "bardo",
+        "description": "masta"
+      },
+      "id": 7
+    },
+    {
+      "nomDepart": "bbbbbb",
+      "type": "yughijokplp",
+      "description": "ddd",
+      "universites": {
+        "nomUni": "sesame",
+        "adresse": "aaaaaaaaa",
+        "description": "sssss",
+        "id": 5
+      },
+      "id": 8
     }
   ]
 }
