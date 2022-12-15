@@ -25,6 +25,7 @@ department: Department=new Department();
 
   ngOnInit(): void {
 
+    
 
     this.universiteSer.allUni().subscribe((dat: Universite[]) => {
       this.listeUni = dat;
