@@ -8,6 +8,8 @@
             <tr>
                 <th>id</th>
                 <th>Nom Equipe</th>
+                <th>Salle</th>
+                <th>Thematique</th>
              
                 <th>action</th>
             </tr>
@@ -16,7 +18,9 @@
             <tr *ngFor="let u of listeEquipe">
                 <td>{{u.id}}</td>
                 <td>{{u.nomEquipe }}</td>
-                
+                <td>{{u.detailEquipe.salle}}</td>
+                <td>{{u.detailEquipe.thematique}}</td>
+
                 <td>
                     <button class="btn btn-sm btn-danger" (click)="deleteEquipe(u.id)" >
                         delete

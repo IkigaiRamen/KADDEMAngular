@@ -61,13 +61,13 @@ export class ContractFormComponent implements OnInit {
       this.contratService
         .updateContrat(this.contrat)
         .subscribe(() => console.log('complete'));
-        location.reload();
-    } else {
+        this.route.navigate(['/contracts/']);
+      } else {
       console.log('this is the add fucntion:', this.contrat);
       this.contratService.addContrat(this.contrat).subscribe((result) => {
         if (result) {
           this.contratList = [this.contrat, ...this.contratList];
-          location.reload();
+          this.route.navigate(['/contracts/']);
         }
       });
     }

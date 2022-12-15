@@ -1,20 +1,56 @@
 {
   "etudiants": [
     {
-      "id": 1,
-      "prenomE": "2020-09-15",
-      "nomE": "2020-09-14",
-      "option": "GAMIX",
-      "equipes": [],
-      "departement": {
-        "idDepart": 3,
-        "nomDepart": "aaa"
+      "nomE": "TEST",
+      "prenomE": "dsqdq",
+      "options": "SE",
+      "department": {
+        "id": 1,
+        "nomDepart": "departement",
+        "code": "dep",
+        "type": "twin",
+        "description": "description"
       },
-      "contracts": []
+      "id": 17
     },
     {
       "nomE": "ram",
-      "id": 12
+      "prenomE": "dsqdq",
+      "options": "NIDS",
+      "department": {
+        "id": 1,
+        "nomDepart": "departement",
+        "code": "dep",
+        "type": "twin",
+        "description": "description"
+      },
+      "id": 18
+    },
+    {
+      "department": {
+        "id": 1,
+        "nomDepart": "departement",
+        "code": "dep",
+        "type": "twin",
+        "description": "description"
+      },
+      "options": "SIM",
+      "prenomE": "dsqds",
+      "nomE": "dsqdsqd",
+      "id": 19
+    },
+    {
+      "department": {
+        "id": 1,
+        "nomDepart": "departement",
+        "code": "dep",
+        "type": "twin",
+        "description": "description"
+      },
+      "options": "SE",
+      "prenomE": "TEST",
+      "nomE": "test",
+      "id": 20
     }
   ],
   "equipe": [
@@ -27,12 +63,48 @@
         "salle": 11,
         "thematique": "theme"
       }
+    },
+    {
+      "nomEquipe": "name",
+      "detailEquipe": {
+        "salle": "12",
+        "thematique": "ddssqd"
+      },
+      "id": 2
+    },
+    {
+      "nomEquipe": "test",
+      "detailEquipe": {
+        "salle": "14",
+        "thematique": "theme"
+      },
+      "id": 3
     }
   ],
   "contrat": [
     {
-      "id": 1,
-      "dateDebutContrat": "22-04-16"
+      "archive": true,
+      "dateDebutContrat": "2022-12-22",
+      "dateFinContrat": "2022-12-21",
+      "specialite": "2",
+      "montantContrat": 1500,
+      "id": 2
+    },
+    {
+      "archive": true,
+      "dateDebutContrat": "2022-12-22",
+      "dateFinContrat": "2022-12-16",
+      "specialite": "3",
+      "montantContrat": 1200,
+      "id": 3
+    },
+    {
+      "archive": true,
+      "dateDebutContrat": "2022-12-15",
+      "dateFinContrat": "2022-12-16",
+      "specialite": "2",
+      "montantContrat": 2000,
+      "id": 4
     }
   ],
   "universite": [
@@ -77,6 +149,15 @@
       "adresse": "aaaaa",
       "description": "ddddd",
       "id": 10
+    }
+  ],
+  "departement": [
+    {
+      "id": 1,
+      "nomDepart": "departement",
+      "code": "dep",
+      "type": "twin",
+      "description": "description"
     }
   ]
 }

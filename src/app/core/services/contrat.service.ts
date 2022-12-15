@@ -6,12 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContratService {
-  public url = 'http://localhost:3000/contrat';
+
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
+      'Content-Type': 'application/json'
+    })
+  }
+  public url = 'http://localhost:3000/contrat';
+
   constructor(private http: HttpClient) {}
   getAllContrat() {
     return this.http.get<Contrat[]>(this.url);
@@ -20,10 +22,13 @@ export class ContratService {
     return this.http.get<Contrat>(this.url+'/'+id);
   }
   addContrat(c: Contrat) {
-        return this.http.post(this.url, Contrat)
+    return this.http.post(this.url, c);
+
   }
 
   updateContrat(Contrat: Contrat): Observable<Object> {
+    console.log("this is the contract update",Contrat)
+
     const ID = Contrat.id;
 
     return this.http.put<Contrat>(this.url+'/'+ID, Contrat);

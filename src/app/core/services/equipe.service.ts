@@ -24,7 +24,7 @@ export class EquipeService {
     return this.http.get<Equipe>(this.url+'/'+id);
   } 
   addEquipe(Equipe: Equipe){
-    return this.http.post(this.url+`/addEquipe`, Equipe);
+    return this.http.post(this.url, Equipe);
   }
  
  deleteEquipe(id: number): Observable<Object> {
