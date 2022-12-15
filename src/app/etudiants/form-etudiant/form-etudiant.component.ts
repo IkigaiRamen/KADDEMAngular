@@ -27,19 +27,22 @@ export class FormEtudiantComponent implements OnInit {
 
   ngOnInit(): void {
     this.etudiant = new Etudiant();
+    this.etudiant.department=new Department()
+
     this.contratService.getAllContrat().subscribe((data: Contrat[])=> {
       this.listeContrats=data;
-      console.log(data);
-    })
+      console.log("this is the contracts ",data); })
+
+
     this.DepartementService.getAlldep().subscribe((data: Department[]) => {
     this.listeDept = data;
-    console.log(data);
-  }
-    )
+    console.log("this is the departements ",data); })
+
+
     let id = this.currentRoute.snapshot.params['id'];
     if (id != null) {
       //update
-      this.action = 'Update';
+      this.action = 'update';
       this.etudiantService.getEtudiantById(id).subscribe((data: Etudiant) => {
         this.etudiant = data;
       });
@@ -59,6 +62,7 @@ export class FormEtudiantComponent implements OnInit {
   //add|update
   add() {
     if (this.action == 'update') {
+      console.log("this is the students + update",this.etudiant , this.etudiant.department)
       this.etudiantService
         .updateEtudiant(this.etudiant)
         .subscribe(() => console.log('complete'));

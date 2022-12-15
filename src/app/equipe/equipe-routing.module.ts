@@ -4,7 +4,9 @@ import { FormEquipeComponent } from './form-equipe/form-equipe.component';
 import { ListEquipeComponent } from './list-equipe/list-equipe.component';
 
 const routes: Routes = [{ path: '', component: ListEquipeComponent },
-  {path:"equipe/add", component:FormEquipeComponent}]
+{path:"updateEquipe/:id",component:FormEquipeComponent},
+  {path:"equipe/add", component:FormEquipeComponent}
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

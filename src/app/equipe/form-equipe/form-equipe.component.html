@@ -20,7 +20,7 @@
 
  <div class="form-group col-md-6">
    <label>Salle </label>
-   <input type="text" name="salle" [(ngModel)]="DetailEquipe.salle"
+   <input type="text" name="salle" [(ngModel)]="Equipe.detailEquipe.salle"
    class="form-control" 
     pattern="[1-9]{2,6}$" #t="ngModel">
    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
@@ -31,7 +31,7 @@
 </div>
 <div class="form-group col-md-6">
    <label>Thematique </label>
-   <input type="text" name="thematique" [(ngModel)]="DetailEquipe.thematique"
+   <input type="text" name="thematique" [(ngModel)]="Equipe.detailEquipe.thematique"
    class="form-control" pattern="[A-Za-z]{3,12}$" #m="ngModel">
    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
 

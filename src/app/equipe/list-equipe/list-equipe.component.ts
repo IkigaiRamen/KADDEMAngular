@@ -22,7 +22,7 @@ export class ListEquipeComponent implements OnInit {
    });
  }
  updateEquipe(id: number) {
-   this.router.navigate(['/universites/universite/putUni', id]);
+   this.router.navigate(['/equipes/updateEquipe/add', id]);
  }
 
  

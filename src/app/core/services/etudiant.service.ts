@@ -26,10 +26,10 @@ export class EtudiantService {
     return this.http.post(this.url, Etudiant);
   }
 
-  updateEtudiant(e: Etudiant) {
-  
-    return this.http.put<Etudiant>(this.url+'/'+e.id,Etudiant);
-  }
+  updateEtudiant(e: Etudiant):Observable<Etudiant> {
+    const ID =e.id;
+    console.log("this is the object in service",e , e.department)
+    return this.http.put<Etudiant>(this.url+'/'+ID,e);}
 
   deleteEtudiant(id: number): Observable<Object> {
     return this.http.delete(this.url+'/'+id);

@@ -31,9 +31,8 @@ export class EquipeService {
     return this.http.delete(this.url +'/'+id);
   }
 
-  updateEquipe(Equipe: Equipe ): Observable<Equipe> {
+  updateEquipe(Equipe: Equipe ) {
     const ID = Equipe.id;
-
     return this.http.put<Equipe>(this.url+'/'+ID, Equipe);
   }
   

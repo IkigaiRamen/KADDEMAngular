@@ -26,11 +26,8 @@
                         delete
                     </button>
                     &nbsp;
-                    <a class="btn btn-sm btn-warning" (click)="updateEquipe(u.id)">
-                        update  
-                    </a>
-                    &nbsp;
-                    
+                    <a class="btn btn-sm btn-warning" [routerLink]="['/equipes/updateEquipe/',u.id]">
+                        update </a>
                 </td>
             </tr>
         </tbody>

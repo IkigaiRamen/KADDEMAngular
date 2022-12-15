@@ -13,7 +13,7 @@ export class FormEquipeComponent implements OnInit {
   listEquipe: Equipe[];
   action:String;
   Equipe: Equipe;
-  DetailEquipe:detailEquipe;
+  
     
     constructor(
       private Equipeservice: EquipeService,
@@ -24,14 +24,14 @@ export class FormEquipeComponent implements OnInit {
   
     ngOnInit(): void {
       this.Equipe = new Equipe();
-      this.DetailEquipe=new detailEquipe();
+      this.Equipe.detailEquipe= new detailEquipe()
+      console.log("this equipe before update", this.Equipe)
 
       let id = this.currentRoute.snapshot.params['id'];
       if (id != null) {
         //update
-        this.action = 'Update';
+        this.action = 'update';
         this.Equipeservice.getEquipeById(id).subscribe((data: Equipe) => {
-          
           this.Equipe = data;
         });
         console.log('=================>' + this.Equipe);
@@ -50,14 +50,12 @@ export class FormEquipeComponent implements OnInit {
     //add|update
     add() {
       if (this.action == 'update') {
-        this.Equipe.detailEquipe=this.DetailEquipe;
-        this.Equipeservice
-          .updateEquipe(this.Equipe)
+        console.log("this equipe after update id", this.Equipe.id)
+        this.Equipeservice.updateEquipe(this.Equipe)
           .subscribe(() => console.log('complete'));
       } else {
       
         console.log('this.Equipe:', this.Equipe);
-        this.Equipe.detailEquipe=this.DetailEquipe;
         this.Equipeservice.addEquipe(this.Equipe).subscribe((result) => {
           if (result) {
             this.listEquipe = [this.Equipe, ...this.listEquipe];

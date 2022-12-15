@@ -38,7 +38,7 @@
 
    <div class="form-group col-md-6">
     <label>Departement</label>
-    <select [(ngModel)]="etudiant.department" name="option" class="form-control" required #b="ngModel">
+    <select [(ngModel)]="etudiant.department" name="optiondept" class="form-control" required #b="ngModel">
       <option *ngFor="let depart of listeDept" [ngValue]="depart">{{depart.nomDepart}}</option>
     </select>
     
@@ -47,7 +47,7 @@
   </div>
   </div>
 
-  <div class="form-group col-md-6">
+ <!-- <div class="form-group col-md-6">
     <label>Contrats</label>
     <div *ngFor='let contrats of listeContrats; let i = index'>
     
@@ -60,6 +60,8 @@
       <div *ngIf="s.hasError('required')">This field is required</div>
   </div>
   </div>
+
+  -->
   <br>
   <button class="btn btn-success" (click)="add()" [disabled]="f.invalid">
     save
