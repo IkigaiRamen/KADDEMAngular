@@ -8,15 +8,16 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --watch server/database.json "
-
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^13.0.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
     "@angular/forms": "^14.2.0",
+    "@angular/material": "^13.0.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
