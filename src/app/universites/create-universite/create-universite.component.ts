@@ -25,9 +25,7 @@ universite: Universite;
   ) {}
 
   ngOnInit(): void {
-    console.log(this.universiteFromParent);
     if(this.universiteFromParent!=null){
-      console.log("aywah");
       this.action="update";
       this.universite=this.universiteFromParent;
     }else{
@@ -38,7 +36,6 @@ universite: Universite;
 
 
   notifparent(universite:Universite){
-    console.log(universite);
     this.notification.emit(universite)
   }
   //delete

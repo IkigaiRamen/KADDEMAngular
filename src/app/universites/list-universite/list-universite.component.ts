@@ -39,6 +39,9 @@ console.log(universite);
 if(universite.id!=null){
   console.log(universite);
 this.action="update";
+this.universiteservice.updateUni(universite).subscribe();
+location.reload();
+
 }
 else{
         console.log(universite);
@@ -55,8 +58,7 @@ else{
         this.shouldOpen=true;
       }
   add(universite:Universite) {
-    console.log("aywah");
-    console.log(universite);
+  
 
     if (this.action == 'update') {
       this.universiteservice

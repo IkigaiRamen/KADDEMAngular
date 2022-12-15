@@ -26,7 +26,7 @@ export class ContratService {
 
   }
 
-  updateContrat(Contrat: Contrat): Observable<Object> {
+  updateContrat(Contrat: Contrat) {
     console.log("this is the contract update",Contrat)
 
     const ID = Contrat.id;

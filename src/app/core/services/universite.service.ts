@@ -31,6 +31,7 @@ export class UniversiteService {
   getUniversiteById(idUni: number): Observable<Universite> {
     return this.http.get<Universite>(this.url + `/getbyid/${idUni}`);}
   updateUni(universite: Universite ): Observable<Universite> {
+    console.log("last step update");
     return this.http.put<Universite>(this.url+'/'+universite.id,universite);
   }
   

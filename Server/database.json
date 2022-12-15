@@ -87,7 +87,7 @@
       "dateDebutContrat": "2022-12-22",
       "dateFinContrat": "2022-12-21",
       "specialite": "2",
-      "montantContrat": 1500,
+      "montantContrat": 1700,
       "id": 2
     },
     {
@@ -95,7 +95,7 @@
       "dateDebutContrat": "2022-12-22",
       "dateFinContrat": "2022-12-16",
       "specialite": "3",
-      "montantContrat": 1200,
+      "montantContrat": 600,
       "id": 3
     },
     {
@@ -103,14 +103,14 @@
       "dateDebutContrat": "2022-12-15",
       "dateFinContrat": "2022-12-16",
       "specialite": "2",
-      "montantContrat": 2000,
+      "montantContrat": 2700,
       "id": 4
     }
   ],
   "universite": [
     {
       "id": 1,
-      "nomUni": "esprit",
+      "nomUni": "espdddddd",
       "adresse": "bardo",
       "description": "masta"
     },
@@ -125,24 +125,6 @@
       "adresse": "ariana",
       "description": "fff",
       "id": 6
-    },
-    {
-      "nomUni": "faaaa",
-      "adresse": "ariana",
-      "description": "fff",
-      "id": 7
-    },
-    {
-      "nomUni": "ssss",
-      "description": "fff",
-      "adresse": "aaaaa",
-      "id": 8
-    },
-    {
-      "nomUni": "jkjkjk",
-      "adresse": "ariana",
-      "description": "ddd",
-      "id": 9
     },
     {
       "nomUni": "Esprit",

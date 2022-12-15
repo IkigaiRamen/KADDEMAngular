@@ -67,7 +67,7 @@ export class ContractFormComponent implements OnInit {
       this.contratService.addContrat(this.contrat).subscribe((result) => {
         if (result) {
           this.contratList = [this.contrat, ...this.contratList];
-          this.route.navigate(['/contracts/']);
+          this.route.navigate(['/contracts/']).then(()=>{window.location.reload});
         }
       });
     }

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import jsPDF from 'jspdf';
 import { Contrat } from '../../core/Model/Contrat';
 import { ContratService } from '../../core/services/contrat.service';
@@ -12,7 +13,7 @@ export class ContractListComponent implements OnInit {
 
   @ViewChild('content', { static: false }) el!: ElementRef;
 
-  constructor(private contratService: ContratService) {}
+  constructor( public route: Router,private contratService: ContratService) {}
   contrat: Contrat;
 
   contratList: Contrat[];
