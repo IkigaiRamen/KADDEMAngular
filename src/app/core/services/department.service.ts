@@ -30,13 +30,13 @@ export class DepartmentService {
   deleteDepartment(id: number): Observable<Object> {
     return this.http.delete(this.url+'/'+id);
   }
-  getDepartmentById(id: number): Observable<Department> {
+  getDepartmentById(id: number) {
     return this.http.get<Department>(this.url+'/'+id);
   } 
  
   updateDepartment(department: Department): Observable<any> {
-    return this.http.put<Department>(this.url+'/'+department.id,department);
-  }
+    return this.http.put<Department>(this.url+'/'+department.id,department);}
+    
   exportPDF(): Observable<any> {
     return this.http.get<Department>(this.url + `/pdfDownload`, {
       responseType: 'blob' as 'json'});

@@ -22,11 +22,11 @@
                 <td>{{etudiant.department.nomDepart}}</td>
                 <td>
                     <button class="btn btn-sm btn-danger" (click)="delete(etudiant.id)" >
-                        Delete
+                        Supprimer
                     </button>
                     &nbsp;
                     <a class="btn btn-sm btn-warning" [routerLink]="['/etudiants/updateEtudiant/',etudiant.id]">
-                        update  
+                        Modifier  
                     </a>
                 </td>
             </tr>

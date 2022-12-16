@@ -40,15 +40,15 @@ if(universite.id!=null){
   console.log(universite);
 this.action="update";
 this.universiteservice.updateUni(universite).subscribe();
-location.reload();
+this.router.navigate(['/universites/universite/list']);
 
 }
 else{
         console.log(universite);
         console.log("last");
         this.universiteservice.addUniv(universite).subscribe();
-       location.reload();
-}
+        this.router.navigate(['/universites/universite/list']);
+      }
       }
       sendTofils(u:Universite){
         console.log("2")
@@ -70,7 +70,7 @@ else{
       this.universiteservice.addUniv(this.universite).subscribe((result) => {
         if (result) {
           this.Universites = [this.universite, ...this.listUniversite];
-          location.reload();
+          this.router.navigate(['/universites/universite/list']);
         }
       });
     }

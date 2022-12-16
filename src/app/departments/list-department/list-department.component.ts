@@ -19,6 +19,7 @@ export class ListDepartmentComponent implements OnInit {
 
   list: Department[];
   listdepartments: any;
+  
   nomUni:any;
   idDepart:number;
   departmentsList:any;

@@ -1,6 +1,6 @@
 <div id="content" #content> 
   <h1>List Universite</h1>
-  <button type="button"  (click)="openAddForm()" >Add new Student</button>
+  <button type="button"  (click)="openAddForm()" >Ajouter une nouvelle universite</button>
   <div *ngIf="shouldOpen">
             
     <app-create-universite [universiteFromParent]="un" (notification)="add2($event)"></app-create-universite>
@@ -26,11 +26,11 @@
               
               <td>
                   <button class="btn btn-sm btn-danger" (click)="deleteUniv(u.id)" >
-                      delete
+                      Supprimer
                   </button>
                   &nbsp;
                   <a class="btn btn-sm btn-warning" (click)="sendTofils(u)">
-                      update  
+                      Modifier  
                   </a>
                   &nbsp;
                   

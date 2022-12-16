@@ -51,7 +51,7 @@
   <label> Universite</label>
   <div class="col-sm-10">
 
-    <select [(ngModel)]="department.universites" name="option" class="form-control" required #b="ngModel">
+    <select [(ngModel)]="department.universites" name="option" class="form-control"  #b="ngModel">
       <option *ngFor="let uni of listeUni" [ngValue]="uni">{{uni.nomUni}}</option>
     </select>
  </div>

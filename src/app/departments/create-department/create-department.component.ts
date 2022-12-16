@@ -36,11 +36,12 @@ department: Department=new Department();
     let id = this.currentRoute.snapshot.params['id'];
     if (id != null) {
       //update
-      this.action = 'update';
-      this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data:Department[]) => {
-        
-        this.department.universites.nomUni= data;
-      });
+      this.action = 'update'
+        this.departmentserivce.getDepartmentById(id).subscribe((data: Department) => {
+          this.department = data;
+      }
+      
+      );
       console.log('=================>' + this.department);
       this.goToDepartmentList
     } else {
@@ -51,8 +52,8 @@ department: Department=new Department();
     }
 
     //get
-    this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data: Department[]) => {
-      this.listdepartments = data;
+    this.departmentserivce.getDepartmentById(id).subscribe((data: Department) => {
+      this.department = data;
     });
   }
 
