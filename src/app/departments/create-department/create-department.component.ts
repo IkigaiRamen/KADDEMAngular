@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Department } from 'src/app/core/Model/Department';
 import { Universite } from 'src/app/core/Model/Universite';
 import { DepartmentService } from 'src/app/core/services/department.service';
+import { UniversiteService } from 'src/app/core/services/universite.service';
 
 
 @Component({
@@ -13,13 +14,22 @@ import { DepartmentService } from 'src/app/core/services/department.service';
 })
 export class CreateDepartmentComponent implements OnInit {
   listdepartments: Department[];
+  listeUni: Universite[];
 action:String;
 nomUni:any;
 department: Department=new Department();
 
-  constructor(private departmentserivce: DepartmentService, private router: Router,  private currentRoute: ActivatedRoute) { }
+  constructor(private departmentserivce: DepartmentService,private universiteSer: UniversiteService, private router: Router,  private currentRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    
+
+    this.universiteSer.allUni().subscribe((dat: Universite[]) => {
+      this.listeUni = dat;
+      console.log(dat);
+    })
+    
     this.department.universites = {nomUni:null};
     
     this.department = new Department();
