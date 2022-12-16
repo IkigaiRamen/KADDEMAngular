@@ -7,13 +7,13 @@
      pattern="[A-Za-z]{3,12}$" #n="ngModel">
     <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
         <div *ngIf="n.hasError('required')">
-           this field is required
+           Cette champs est obligatoire
           </div>
         <div *ngIf="n.hasError('minlength')">
-           minlength = 3 !
+           la longeur minimal est 3 ! !
         </div>
         <div *ngIf="n.hasError('pattern')">
-          error pattern
+          erreur de pattern
        </div>
     </div>
  </div>
@@ -25,7 +25,7 @@
     pattern="[1-9]{2,6}$" #t="ngModel">
    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
        <div *ngIf="n.hasError('pattern')">
-         error pattern
+         erreur de pattern
       </div>
    </div>
 </div>
@@ -36,7 +36,7 @@
    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
 
        <div *ngIf="n.hasError('pattern')">
-         error pattern
+         erreur de pattern
       </div>
    </div>
 </div>

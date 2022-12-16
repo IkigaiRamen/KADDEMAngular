@@ -14,14 +14,12 @@ import { UniversiteService } from 'src/app/core/services/universite.service';
 })
 export class CreateDepartmentComponent implements OnInit {
   listdepartments: Department[];
+  listeUni: Universite[];
 action:String;
 nomUni:any;
-listeUni:Universite[];
 department: Department=new Department();
 
-  constructor(private departmentserivce: DepartmentService,
-     private router: Router,  private currentRoute: ActivatedRoute,
-     private universiteSer:UniversiteService) { }
+  constructor(private departmentserivce: DepartmentService,private universiteSer: UniversiteService, private router: Router,  private currentRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
@@ -35,15 +33,14 @@ department: Department=new Department();
     
     this.department = new Department();
     let id = this.currentRoute.snapshot.params['id'];
-          //update
-
     if (id != null) {
-      console.log(id);
-      this.departmentserivce.getDepartmentById(id).subscribe((data:Department)=>{
-        this.department=data
-      })
-      console.log(this.department);
+      //update
       this.action = 'update';
+      this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data:Department[]) => {
+        
+        this.department.universites.nomUni= data;
+      });
+      console.log('=================>' + this.department);
       this.goToDepartmentList
     } else {
       //add
@@ -52,6 +49,10 @@ department: Department=new Department();
       this.goToDepartmentList
     }
 
+    //get
+    this.departmentserivce.getDepartmentByIdUniv(this.nomUni).subscribe((data: Department[]) => {
+      this.listdepartments = data;
+    });
   }
 
   //add|update
@@ -60,8 +61,6 @@ department: Department=new Department();
       this.departmentserivce
         .updateDepartment(this.department)
         .subscribe(() => console.log('complete'));
-          this.router.navigate(['/departments/Department/list'])
-
     } else {
     
       console.log('this.department:', this.department);
@@ -82,7 +81,7 @@ department: Department=new Department();
   }
   //navigate
   goToDepartmentList() {
-    this.router.navigate(['/DepartmentDepartment/list']);
+    this.router.navigate(['/Department']);
   }
 }
 

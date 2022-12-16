@@ -7,13 +7,13 @@
      pattern="[A-Za-z]{3,12}$" #n="ngModel">
     <div class="alert alert-danger" *ngIf="n.invalid && n.touched">
         <div *ngIf="n.hasError('required')">
-           this field is required
+           Cette champs est obligatoire
           </div>
         <div *ngIf="n.hasError('minlength')">
-           minlength = 3 !
+           la longeur minimal est 3 ! !
         </div>
         <div *ngIf="n.hasError('pattern')">
-          error pattern
+          erreur de pattern
        </div>
     </div>
  </div>
@@ -23,28 +23,28 @@
     [(ngModel)]="department.type"
     class="form-control" required #qt="ngModel">
     <div class="alert alert-danger" *ngIf="qt.invalid && qt.touched">
-      this field is required
+      Cette champs est obligatoire
     </div>
     <div *ngIf="qt.hasError('minlength')">
-      minlength = 3 !
+      la longeur minimal est 3 ! !
    </div>
    <div *ngIf="qt.hasError('pattern')">
-     error pattern
+     erreur de pattern
   </div>
   </div>
   <div class="form-group col-md-6">
    <label>Description</label>
    <input type="textarea" name="description"
    [(ngModel)]="department.description"
-   class="form-control" required #qt="ngModel">
-   <div class="alert alert-danger" *ngIf="qt.invalid && qt.touched">
-     this field is required
+   class="form-control" required #bt="ngModel">
+   <div class="alert alert-danger" *ngIf="bt.invalid && bt.touched">
+     Cette champs est obligatoire
    </div>
-   <div *ngIf="qt.hasError('minlength')">
-     minlength = 3 !
+   <div *ngIf="bt.hasError('minlength')">
+     la longeur minimal est 3 ! !
   </div>
-  <div *ngIf="qt.hasError('pattern')">
-    error pattern
+  <div *ngIf="bt.hasError('pattern')">
+    erreur de pattern
  </div>
  </div>
  <div class="form-group">
