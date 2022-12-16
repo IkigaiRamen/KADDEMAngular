@@ -26,10 +26,10 @@ universite: Universite;
 
   ngOnInit(): void {
     if(this.universiteFromParent!=null){
-      this.action="update";
+      this.action="modifier";
       this.universite=this.universiteFromParent;
     }else{
-      this.action = 'Add';
+      this.action = 'ajouter';
       this.universite = new Universite();
     }
   }

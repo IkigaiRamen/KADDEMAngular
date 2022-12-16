@@ -1,7 +1,7 @@
-<h1>{{action}}Universite</h1>
+<h1>{{action}} Universite</h1>
 <form #f="ngForm" (ngSubmit)="notifparent(universite)">
  <div class="form-group col-md-6">
-    <label>Name:* </label>
+    <label>Nom:* </label>
     <input type="text" name="nomUni" [(ngModel)]="universite.nomUni"
     class="form-control" required minlength="3"
      pattern="[A-Za-z]{3,12}$" #n="ngModel">

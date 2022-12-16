@@ -12,7 +12,7 @@
 
       <a class="navbar-brand" href="#">
         <img
-          src="./assets/img/logo1.png"
+          src="./assets/img/es.jpg"
           class="navbar-brand-img"
           alt="..."
           width="120"
@@ -40,7 +40,7 @@
         <!-- Divider -->
         <hr class="my-3" />
         <!-- Heading -->
-        <h6 class="navbar-heading p-0 text-muted">Dashboard</h6>
+        <h6 class="navbar-heading p-0 text-muted">Les tables</h6>
         <!-- Navigation -->
         <!-- Nav items -->
         <ul class="navbar-nav">
@@ -54,16 +54,16 @@
               aria-controls="navbar-Student"
             >
               <i class="ni ni-shop text-primary"></i>
-              <span class="nav-link-text">Students</span>
+              <span class="nav-link-text">Etudiants</span>
             </a>
             <div class="collapse" id="navbar-Student">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a [routerLink]="['/etudiants/']" class="nav-link">List Of Students</a>
+                  <a [routerLink]="['/etudiants/']" class="nav-link">Liste des etudiants</a>
                 </li>
                 <li class="nav-item">
                   <a [routerLink]="['/etudiants/FormEtudiant']" class="nav-link"
-                    >Add New Student</a
+                    >Ajouter un étudiant</a
                   >
                 </li>
               </ul>
@@ -79,17 +79,17 @@
               aria-controls="navbar-Team"
             >
               <i class="ni ni-shop text-primary"></i>
-              <span class="nav-link-text">Teams</span>
+              <span class="nav-link-text">Equipes</span>
             </a>
             <div class="collapse" id="navbar-Team">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
                   <a [routerLink]="['/equipes']" class="nav-link"
-                  >List Equipes</a>                </li>
+                  >Liste des Equipes</a>                </li>
             
                 <li class="nav-item">
                   <a [routerLink]="['/equipes/equipe/add']" class="nav-link"
-                    >Add New Team</a
+                    >Ajouter un équipe</a
                   >
                 </li>
               </ul>
@@ -114,12 +114,12 @@
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
                   <a [routerLink]="['/contracts/']" class="nav-link"
-                    >List Of Contracts</a
+                    >Liste des Contracts</a
                   >
                 </li>
                 <li class="nav-item">
                   <a [routerLink]="['/contracts/addContract']" class="nav-link"
-                    >Add New Contract</a
+                    >Ajouter un contrat</a
                   >
                 </li>
               </ul>
@@ -135,18 +135,18 @@
               aria-controls="navbar-University"
             >
               <i class="ni ni-shop text-primary"></i>
-              <span class="nav-link-text">University</span>
+              <span class="nav-link-text">Universites</span>
             </a>
             <div class="collapse" id="navbar-University">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
                   <a [routerLink]="['/universites/universite/list']" class="nav-link"
-                    >List Of Universities</a
+                    >Liste des Universites</a
                   >
                 </li>
                 <li class="nav-item">
                   <a [routerLink]="['/universites/universite/add']" class="nav-link"
-                    >Add New University</a
+                    >Ajouter un universite</a
                   >
                 </li>
               </ul>
@@ -167,11 +167,11 @@
             <div class="collapse" id="navbar-Department">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a [routerLink]="['/departments/Department']" class="nav-link">List Of Departments</a>
+                  <a [routerLink]="['/departments/Department']" class="nav-link">Liste des Departments</a>
                 </li>
                 <li class="nav-item">
                   <a [routerLink]="['/departments/Department/add']" class="nav-link"
-                    >Add New Department</a
+                    >Ajouter un departement</a
                   >
                 </li>
               </ul>
@@ -190,30 +190,7 @@
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Search form -->
-        <form
-          class="navbar-search navbar-search-light form-inline mr-sm-3"
-          id="navbar-search-main"
-        >
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative input-group-merge">
-              <div class="input-group-prepend">
-                <span class="input-group-text"
-                  ><i class="fas fa-search"></i
-                ></span>
-              </div>
-              <input class="form-control" placeholder="Search" type="text" />
-            </div>
-          </div>
-          <button
-            type="button"
-            class="close"
-            data-action="search-close"
-            data-target="#navbar-search-main"
-            aria-label="Close"
-          >
-            <span aria-hidden="true"></span>
-          </button>
-        </form>
+   
         <!-- Navbar links -->
         <ul class="navbar-nav align-items-center ml-md-auto">
           <li class="nav-item d-xl-none">
@@ -421,20 +398,12 @@
       <div class="header-body">
         <div class="row align-items-center py-4">
           <div class="col-lg-6 col-7">
-            <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+            <h6 class="h2 text-white d-inline-block mb-0">Kaddem</h6>
             <nav
               aria-label="breadcrumb"
               class="d-none d-md-inline-block ml-md-4"
             >
-              <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                <li class="breadcrumb-item">
-                  <a href="#"><i class="fas fa-home"></i></a>
-                </li>
-                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Default
-                </li>
-              </ol>
+           
             </nav>
           </div>
           <div class="col-lg-6 col-5 text-right">

@@ -1,28 +1,20 @@
 {
   "etudiants": [
     {
-      "nomE": "TEST",
-      "prenomE": "dsqdq",
-      "options": "SE",
-      "department": {
-        "id": 1,
-        "nomDepart": "departement",
-        "code": "dep",
-        "type": "twin",
-        "description": "description"
-      },
-      "id": 17
-    },
-    {
       "nomE": "ram",
       "prenomE": "dsqdq",
-      "options": "NIDS",
+      "options": "GAMIX",
       "department": {
-        "id": 1,
-        "nomDepart": "departement",
-        "code": "dep",
-        "type": "twin",
-        "description": "description"
+        "nomDepart": "guyjiokolpm",
+        "type": "dddd",
+        "description": "ddddd",
+        "universites": {
+          "nomUni": "sesame",
+          "adresse": "aaaaaaaaa",
+          "description": "sssss",
+          "id": 5
+        },
+        "id": 9
       },
       "id": 18
     },
@@ -40,17 +32,40 @@
       "id": 19
     },
     {
+      "nomE": "seilah",
+      "prenomE": "yefrni",
+      "options": "SIM",
       "department": {
-        "id": 1,
-        "nomDepart": "departement",
-        "code": "dep",
-        "type": "twin",
-        "description": "description"
+        "nomDepart": "bbbbbb",
+        "type": "yughijokplp",
+        "description": "ddd",
+        "universites": {
+          "nomUni": "sesame",
+          "adresse": "aaaaaaaaa",
+          "description": "sssss",
+          "id": 5
+        },
+        "id": 8
       },
-      "options": "SE",
-      "prenomE": "TEST",
-      "nomE": "test",
-      "id": 20
+      "id": 21
+    },
+    {
+      "department": {
+        "nomDepart": "bbbbbb",
+        "type": "yughijokplp",
+        "description": "ddd",
+        "universites": {
+          "nomUni": "sesame",
+          "adresse": "aaaaaaaaa",
+          "description": "sssss",
+          "id": 5
+        },
+        "id": 8
+      },
+      "options": "NIDS",
+      "prenomE": "yefrni",
+      "nomE": "seilah",
+      "id": 22
     }
   ],
   "equipe": [
@@ -115,28 +130,16 @@
       "description": "masta"
     },
     {
-      "nomUni": "sesame",
-      "adresse": "aaaaaaaaa",
-      "description": "sssss",
-      "id": 5
+      "nomUni": "isima",
+      "adresse": "isim",
+      "description": "isima",
+      "id": 12
     },
     {
-      "nomUni": "faaaa",
-      "adresse": "ariana",
-      "description": "fff",
-      "id": 6
-    },
-    {
-      "nomUni": "Esprit",
-      "adresse": "aaaaa",
-      "description": "ddddd",
-      "id": 10
-    },
-    {
-      "nomUni": "seif",
-      "adresse": "seif",
-      "description": "seif",
-      "id": 11
+      "nomUni": "wawaaa",
+      "adresse": "wawaa",
+      "description": "wawaaaa",
+      "id": 13
     }
   ],
   "departement": [
