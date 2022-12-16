@@ -7,7 +7,7 @@
     <input [(ngModel)]="contrat.dateDebutContrat" type="date" name="dateDebutContrat" class="form-control" 
      required   #t="ngModel" min={{mindate}} max="2024-01-01" [placeholder]="contrat.dateDebutContrat">
      <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
-      <div *ngIf="t.hasError('required')">This field is required</div>
+      <div *ngIf="t.hasError('required')">Cette champs est obligatoire</div>
       <div *ngIf="t.hasError('min')">This date is invalid</div>
 
   </div>
@@ -18,7 +18,7 @@
     <input [(ngModel)]="contrat.dateFinContrat" type="date" name="dateFinContrat" class="form-control" required #p="ngModel" placeholder="contrat.dateFinContrat">
     
     <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
-      <div *ngIf="p.hasError('required')">This field is required</div>
+      <div *ngIf="p.hasError('required')">Cette champs est obligatoire</div>
   </div>
   </div>
   <div class="form-group col-md-6">
@@ -30,14 +30,14 @@
       <option value="3">SECURITE</option>
     </select>
     <div class="alert alert-danger" *ngIf="s.invalid && s.touched">
-      <div *ngIf="s.hasError('required')">This field is required</div>
+      <div *ngIf="s.hasError('required')">Cette champs est obligatoire</div>
   </div>
   </div>
   <div class="form-group col-md-6">
     <label>montantContrat</label>
     <input  [(ngModel)]="contrat.montantContrat" type="number" name="montantContrat" required class="form-control" required #m="ngModel" min="250" max="5000">
     <div class="alert alert-danger" *ngIf="m.invalid && m.touched">
-      <div *ngIf="m.hasError('required')">This field is required</div>
+      <div *ngIf="m.hasError('required')">Cette champs est obligatoire</div>
       <div *ngIf="m.hasError('min')">Montant minimal = 250</div>
       <div *ngIf="m.hasError('max')">Montant maximal = 5000</div>
   </div>
