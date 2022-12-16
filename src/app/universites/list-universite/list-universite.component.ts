@@ -38,7 +38,7 @@ un:Universite;
 console.log(universite);
 if(universite.id!=null){
   console.log(universite);
-this.action="update";
+this.action="modifier";
 this.universiteservice.updateUni(universite).subscribe();
 this.router.navigate(['/universites/universite/list']);
 
@@ -60,7 +60,7 @@ else{
   add(universite:Universite) {
   
 
-    if (this.action == 'update') {
+    if (this.action == 'modifier') {
       this.universiteservice
         .updateUni(this.universite)
         .subscribe(() => console.log('complete'));
