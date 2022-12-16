@@ -62,14 +62,16 @@ department: Department=new Department();
       this.departmentserivce
         .updateDepartment(this.department)
         .subscribe(() => console.log('complete'));
+        this.router.navigate(['/departments/Department/list'])
+
     } else {
     
       console.log('this.department:', this.department);
       this.departmentserivce.addDepartment(this.department).subscribe((result) => {
         if (result) {
-          this.router.navigate(['/departments/Department/list'])
           this.listdepartments = [this.department, ...this.listdepartments];
-          location.reload();
+          this.router.navigate(['/departments/Department/list'])
+
         }
       });
     }

@@ -8,6 +8,7 @@
                 <th>Date Fin</th>
                 <th>Specialité</th>
                 <th>Montant</th>
+                <th>Etudiant</th>
                 <th>action</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                 </td>
                 <td> {{contrat.montantContrat}}
                 </td>
+                <td>{{contrat.etudiant.nomE}}</td>
                 <td>
                     <button class="btn btn-sm btn-danger" (click)="delete(contrat.id)" >
                         Supprimer

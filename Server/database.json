@@ -1,183 +1,164 @@
 {
   "etudiants": [
     {
-      "nomE": "ram",
-      "prenomE": "dsqdq",
-      "options": "GAMIX",
-      "department": {
-        "nomDepart": "guyjiokolpm",
-        "type": "dddd",
-        "description": "ddddd",
-        "universites": {
-          "nomUni": "sesame",
-          "adresse": "aaaaaaaaa",
-          "description": "sssss",
-          "id": 5
-        },
-        "id": 9
-      },
-      "id": 18
-    },
-    {
-      "department": {
-        "id": 1,
-        "nomDepart": "departement",
-        "code": "dep",
-        "type": "twin",
-        "description": "description"
-      },
-      "options": "SIM",
-      "prenomE": "dsqds",
-      "nomE": "dsqdsqd",
-      "id": 19
-    },
-    {
-      "nomE": "seilah",
-      "prenomE": "yefrni",
-      "options": "SIM",
-      "department": {
-        "nomDepart": "bbbbbb",
-        "type": "yughijokplp",
-        "description": "ddd",
-        "universites": {
-          "nomUni": "sesame",
-          "adresse": "aaaaaaaaa",
-          "description": "sssss",
-          "id": 5
-        },
-        "id": 8
-      },
-      "id": 21
-    },
-    {
-      "department": {
-        "nomDepart": "bbbbbb",
-        "type": "yughijokplp",
-        "description": "ddd",
-        "universites": {
-          "nomUni": "sesame",
-          "adresse": "aaaaaaaaa",
-          "description": "sssss",
-          "id": 5
-        },
-        "id": 8
-      },
+      "nomE": "Ram",
+      "prenomE": "Khammessi",
       "options": "NIDS",
-      "prenomE": "yefrni",
-      "nomE": "seilah",
-      "id": 22
+      "department": {
+        "nomDepart": "Twin",
+        "type": "Type",
+        "description": "desc",
+        "universites": {
+          "nomUni": "Esprit",
+          "adresse": "Ariana",
+          "description": "Institut ingenieure",
+          "id": 1
+        },
+        "id": 1
+      },
+      "id": 2
+    },
+    {
+      "nomE": "Seifallah",
+      "prenomE": "yferni",
+      "options": "SIM",
+      "department": {
+        "nomDepart": "CLOUD",
+        "type": "Architecture",
+        "description": "Cloud-based",
+        "universites": {
+          "nomUni": "Esprit",
+          "adresse": "Ariana",
+          "description": "Institut ingenieure",
+          "id": 1
+        },
+        "id": 2
+      },
+      "id": 3
+    },
+    {
+      "nomE": "Dina",
+      "prenomE": "BenMansour",
+      "options": "NIDS",
+      "department": {
+        "nomDepart": "Twin",
+        "type": "Type",
+        "description": "desc",
+        "universites": {
+          "nomUni": "Esprit",
+          "adresse": "Ariana",
+          "description": "Institut ingenieure",
+          "id": 1
+        },
+        "id": 1
+      },
+      "id": 4
     }
   ],
   "equipe": [
     {
-      "id": 1,
+      "detailEquipe": {
+        "salle": "15",
+        "thematique": "theme"
+      },
       "nomEquipe": "innovators",
-      "niveau": "Senior",
-      "etudiants": [],
-      "detailEquipe": {
-        "salle": 11,
-        "thematique": "theme"
-      }
+      "id": 1
     },
     {
-      "nomEquipe": "name",
       "detailEquipe": {
-        "salle": "12",
-        "thematique": "ddssqd"
+        "salle": "15",
+        "thematique": "theme"
       },
+      "nomEquipe": "Gadgeteers",
       "id": 2
-    },
-    {
-      "nomEquipe": "test",
-      "detailEquipe": {
-        "salle": "14",
-        "thematique": "theme"
-      },
-      "id": 3
     }
   ],
   "contrat": [
     {
+      "etudiant": {
+        "nomE": "Seifallah",
+        "prenomE": "yferni",
+        "options": "SIM",
+        "department": {
+          "nomDepart": "CLOUD",
+          "type": "Architecture",
+          "description": "Cloud-based",
+          "universites": {
+            "nomUni": "Esprit",
+            "adresse": "Ariana",
+            "description": "Institut ingenieure",
+            "id": 1
+          },
+          "id": 2
+        },
+        "id": 3
+      },
       "archive": true,
-      "dateDebutContrat": "2022-12-22",
+      "specialite": "1",
+      "montantContrat": 1495,
+      "dateDebutContrat": "2022-12-17",
+      "dateFinContrat": "2022-12-23",
+      "id": 5
+    },
+    {
+      "etudiant": {
+        "nomE": "Dina",
+        "prenomE": "BenMansour",
+        "options": "NIDS",
+        "department": {
+          "nomDepart": "Twin",
+          "type": "Type",
+          "description": "desc",
+          "universites": {
+            "nomUni": "Esprit",
+            "adresse": "Ariana",
+            "description": "Institut ingenieure",
+            "id": 1
+          },
+          "id": 1
+        },
+        "id": 4
+      },
+      "archive": true,
+      "montantContrat": 2500,
+      "specialite": "2",
       "dateFinContrat": "2022-12-21",
-      "specialite": "2",
-      "montantContrat": 1700,
-      "id": 2
-    },
-    {
-      "archive": true,
-      "dateDebutContrat": "2022-12-22",
-      "dateFinContrat": "2022-12-16",
-      "specialite": "3",
-      "montantContrat": 600,
-      "id": 3
-    },
-    {
-      "archive": true,
-      "dateDebutContrat": "2022-12-15",
-      "dateFinContrat": "2022-12-16",
-      "specialite": "2",
-      "montantContrat": 2700,
-      "id": 4
+      "dateDebutContrat": "2022-12-20",
+      "id": 6
     }
   ],
   "universite": [
     {
-      "id": 1,
-      "nomUni": "espdddddd",
-      "adresse": "bardo",
-      "description": "masta"
-    },
-    {
-      "nomUni": "isima",
-      "adresse": "isim",
-      "description": "isima",
-      "id": 12
-    },
-    {
-      "nomUni": "wawaaa",
-      "adresse": "wawaa",
-      "description": "wawaaaa",
-      "id": 13
+      "nomUni": "Esprit",
+      "adresse": "Ariana",
+      "description": "Institut ingenieure",
+      "id": 1
     }
   ],
   "departement": [
     {
-      "nomDepart": "vvvvvvv",
-      "type": "oui",
-      "description": "oui",
+      "nomDepart": "Twin",
+      "type": "GL",
+      "description": "desc",
       "universites": {
-        "id": 1,
-        "nomUni": "espdddddd",
-        "adresse": "bardo",
-        "description": "masta"
+        "nomUni": "Esprit",
+        "adresse": "Ariana",
+        "description": "Institut ingenieure",
+        "id": 1
       },
-      "id": 7
+      "id": 1
     },
     {
-      "nomDepart": "bbbbbb",
-      "type": "yughijokplp",
-      "description": "ddd",
+      "nomDepart": "CLOUD",
+      "type": "Architecture",
+      "description": "Cloud-based",
       "universites": {
-        "nomUni": "sesame",
-        "adresse": "aaaaaaaaa",
-        "description": "sssss",
-        "id": 5
+        "nomUni": "Esprit",
+        "adresse": "Ariana",
+        "description": "Institut ingenieure",
+        "id": 1
       },
-      "id": 8
-    },
-    {
-      "nomDepart": "guyjiokolpm",
-      "type": "dddd",
-      "description": "ddddd",
-      "universites": {
-        "nomUni": "sesame",
-        "adresse": "aaaaaaaaa",
-        "description": "sssss",
-        "id": 5
-      },
-      "id": 9
+      "id": 2
     }
   ]
 }

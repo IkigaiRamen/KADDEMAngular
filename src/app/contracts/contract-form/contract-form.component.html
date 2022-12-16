@@ -42,6 +42,19 @@
       <div *ngIf="m.hasError('max')">Montant maximal = 5000</div>
   </div>
   </div>
+
+
+  <div class="form-group col-md-6">
+    <label>Etudiant</label>
+    <select [(ngModel)]="contrat.etudiant" name="optiondept" class="form-control" required #e="ngModel">
+      <option *ngFor="let etudiant of etudiantList" [ngValue]="etudiant">{{etudiant.nomE}}</option>
+    </select>
+    
+    <div class="alert alert-danger" *ngIf="e.invalid && e.touched">
+      <div *ngIf="s.hasError('required')">Cette champs est obligatoire</div>
+  </div>
+  </div>
+
   <br>
   <button class="btn btn-success" (click)="add()" [disabled]="f.invalid">
     save
